@@ -4,6 +4,8 @@ describe 'querying the bears table' do
     @sql_runner = SQLRunner.new(@db)
     @sql_runner.execute_create_file
     @sql_runner.execute_data
+    # binding.pry
+
   end
   after do
     File.open('lib/sql', 'w'){ |f| f.truncate(0) }

@@ -19,10 +19,12 @@ class SQLRunner
   def execute_select_file
     sql = File.read("lib/select.sql")
     @db.execute_batch(sql)
+
   end
 
   def execute_data
     sql = File.read('lib/seed.sql')
     @db.execute_batch(sql)
   end
+  
 end
